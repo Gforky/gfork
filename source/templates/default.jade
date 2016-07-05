@@ -14,7 +14,14 @@ html
       li: a(href='#others') Others
     
     .main-content
-      block content
+      case href
+        when '/'
+          block content
+        when '#about'
+        when '#blog'
+        when '#others'
+      default
+        p No content to be displayed
 
     .footer
       p Copyright © 2016 Luwen Miao. Luwen Miao is a potential geek on his way :)
