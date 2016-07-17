@@ -1,13 +1,17 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
+  , path = require('path')
+  , ghost = require('./ghost_app/ghost_in_the_middle')
   , homepage = require('jade').compileFile(__dirname + '/source/templates/homepage.jade')
   , aboutpage = require('jade').compileFile(__dirname + '/source/templates/aboutpage.jade')
-  , blog = require('jade').compileFile(__dirname + '/source/templates/blog.jade')
   , others = require('jade').compileFile(__dirname + '/source/templates/others.jade')
+
+
 
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))
+
 
 app.get('/', function (req, res, next) {
   try {
@@ -27,14 +31,9 @@ app.get('/about', function(req, res, next) {
   }
 })
 
-app.get('/blog', function(req, res, next) {
-  try {
-    var html = blog({ title: 'Blog' })
-    res.send(html)
-  } catch (e) {
-    next(e)
-  }
-})
+app.use( '/blog', ghost({
+  config: path.join(__dirname, 'ghost_app/config.js')
+}) )
 
 app.get('/others', function(req, res, next) {
   try {
