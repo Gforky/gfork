@@ -54,3 +54,26 @@ body {
   color: #444;
   font-size: 12px;
 }
+.about-img-whut,
+.about-img-usc,
+.about-img-sjsu {
+  width: 120px;
+  height: 120px;
+}
+.about-degree-whut > *,
+.about-degree-usc > *,
+.about-degree-sjsu > * {
+  vertical-align: top;
+}
+.about-degree-whut,
+.about-degree-usc,
+.about-degree-sjsu {
+  margin-bottom: 1em;
+}
+.about-degree-whut p,
+.about-degree-usc p,
+.about-degree-sjsu p {
+  display: inline-block;
+  text-align: left;
+  margin-left: 1.7em;
+}
