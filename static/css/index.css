@@ -37,6 +37,7 @@ body {
   color: var(--gold);
 }
 .nav {
+  width: 100%;
   background: #000;
   text-align: center;
   z-index: 1000;
