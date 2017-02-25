@@ -6,15 +6,16 @@ html
     script(type='text/javascript', src='/js/scrollANDfix.js')
     script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
     title Luwen Miao's Workspace
+  block js
   body
     .header
       h1.page-title Luwen Miao's Workspace
 
     ul.nav
-      li.button: a(href='/') Home
-      li.button: a(href='about') About me
-      li.button: a(href='https://gfork-blog.herokuapp.com') Blog
-      li.button: a(href='others') Others
+      li.home.button: a(href='/') Home
+      li.about.button: a(href='about') About me
+      li.blog.button: a(href='https://gfork-blog.herokuapp.com') Blog
+      li.others.button: a(href='others') Others
     
     .main-content
       block content

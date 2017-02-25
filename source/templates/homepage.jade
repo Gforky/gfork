@@ -1,12 +1,17 @@
 extend default
 
+append js
+	script.
+		$(document).ready(function() {
+			$('.home').toggleClass('colorBlue');
+		})
 block content
-  p.
-    This is the personal website owned by Luwen Miao. With a high passion for computer science and network programming,
-    I established this website for study and practice. 
-  p.
-    The website includes my persoanl introduction and blogs. I also will publish my research results about mesh network and
-    computer vision from time to time (if any result). The main motivation of this website is record and share. The website will
-    be decorated with new features, as long as I keep learning.
+	p.
+		This is the personal website owned by Luwen Miao. With a high passion for computer science and network programming,
+		I established this website for study and practice. 
+	p.
+		The website includes my persoanl introduction and blogs. I also will publish my research results about mesh network and
+		computer vision from time to time (if any result). The main motivation of this website is record and share. The website will
+		be decorated with new features, as long as I keep learning.
 
   

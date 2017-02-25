@@ -1,5 +1,10 @@
 extend default
 
+append js
+	script.
+		$(document).ready(function() {
+			$('.about').toggleClass('colorBlue');
+		})
 append content
 	p.
 		Education
