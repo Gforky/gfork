@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,700");
+:root {
+  --blue: #0055A2;
+  --gold: #E5A823;
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +23,23 @@ body {
   text-transform: uppercase;
   color: #fff;
 }
+.button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: var(--blue);
+  color: var(--gold);
+}
 .nav {
   background: #000;
   text-align: center;
+  z-index: 1000;
 }
 .nav li {
   display: inline-block;
@@ -31,10 +49,6 @@ body {
   padding: 20px;
   color: #fff;
   text-decoration: none;
-}
-.nav a:hover {
-  background-color: #3ab795;
-  text-decoration: underline;
 }
 .main-content {
   margin: 50px auto;

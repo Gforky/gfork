@@ -3,16 +3,17 @@ doctype html
 html
   head
     link(rel='stylesheet', href='/css/index.css')
+    script(type="text/javascript", src="/js/scrollANDfix.js")
     title Luwen Miao's Workspace
   body
     .header
       h1.page-title Luwen Miao's Workspace
 
     ul.nav
-      li: a(href='/') Home
-      li: a(href='about') About me
-      li: a(href='https://gfork-blog.herokuapp.com') Blog
-      li: a(href='others') Others
+      li.button: a(href='/') Home
+      li.button: a(href='about') About me
+      li.button: a(href='https://gfork-blog.herokuapp.com') Blog
+      li.button: a(href='others') Others
     
     .main-content
       block content
