@@ -3,11 +3,19 @@ doctype html
 html
   head
     link(rel='stylesheet', href='/css/index.css')
+    // load jquery
     script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+    // load angular js
+    script(type='text/javascript', src='https://code.angularjs.org/1.5.8/angular.js')
+    script(type='text/javascript', src='https://code.angularjs.org/1.5.8/angular-animate.min.js')
+    script(type='text/javascript', src='https://code.angularjs.org/1.5.8/angular-touch.min.js')
+    // load user scripts
+    script(type='text/javascript', src='/js/myApp.js')
     script(type='text/javascript', src='/js/scrollANDfix.js')
     title Luwen Miao's Workspace
-  block js
-  body
+    block js
+      
+  body(ng-app='myApp')
     .header
       h1.page-title Luwen Miao's Workspace
 
