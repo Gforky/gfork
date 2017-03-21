@@ -5,6 +5,14 @@ append js
 		$(document).ready(function() {
 			$('.about').toggleClass('colorBlue');
 		})
+	//	item template
+	script#item-template(type="text/x-template")
+		li
+			div(v-bind:class="{bold: isFolder}", @click="toggle", @dblclick="changeType") {{model.name}}
+				span(v-if="isFolder") [{{open ? '-' : '+'}}]
+			ul(v-show="open", v-if="isFolder")
+				item.item(v-bind:model="model", v-bind:data="model", v-bind:key="model.name", v-for="model in model.children")
+
 append content
 	p.
 		Education
@@ -35,3 +43,6 @@ append content
 			Majority: Computer Engineering
 			<br>
 			Years: 2015 - Current
+
+	ul#demo
+		item.item(v-bind:model="treeData")

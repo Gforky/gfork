@@ -5,13 +5,13 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-		console.log(fixTop);
-		console.log(docTop);
 		if(fixTop < docTop) {
 			fix.css({'position':'fixed'});
 			fix.css({top:0});
+			$('.main-content').css({'margin': '110px auto'});
 		} else {
 			fix.css({'position':'static'});
+			$('.main-content').css({'margin': '50px auto'});
 		}
 	})
 });
