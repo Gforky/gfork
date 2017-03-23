@@ -1,30 +1,60 @@
 $(document).ready(function() {// demo data
     var data = {
-    name: 'My Tree',
+    name: 'My Skill Set',
     children: [
-      { name: 'hello' },
-      { name: 'wat' },
       {
-        name: 'child folder',
+        name: 'Networking',
         children: [
-          {
-            name: 'child folder',
+          { name: 'Routing protocols like EIGRP and OSPF' },
+          { name: 'Switching protocols like STP' },
+          { name: 'TCP/IP stack'},
+          { name: 'Network Troublshooting'},
+          { name: 'CCNA'}
+        ]
+      },
+      {
+        name: 'Web Development',
+        children: [
+          { name: 'Front-End',
             children: [
-              { name: 'hello' },
-              { name: 'wat' }
+              { name: 'HTML'},
+              { name: 'CSS'},
+              { name: 'AngularJS'},
+              { name: 'jQuery'},
+              { name: 'Jade templating language'}
             ]
           },
-          { name: 'hello' },
-          { name: 'wat' },
-          {
-            name: 'child folder',
+          { name: 'Back-End',
             children: [
-              { name: 'hello' },
-              { name: 'wat' }
+              { name: 'NodeJS'},
+              { name: 'Flask framework'},
+              { name: 'PHP'},
+              { name: 'AJAX'}
             ]
           }
         ]
-      }
+      },
+      {
+        name: 'Database',
+        children: [
+          { name: 'SQL language'},
+          { name: 'Experience with MySQL'},
+          { name: 'Experience with MariaDB'},
+          { name: 'Experience with PostgreSQL'},
+          { name: 'Experience with MangoDB'}
+        ]
+      },
+      {
+        name: 'Programming Languages',
+        children: [
+          { name: 'JAVA (primary language)'},
+          { name: 'C/C++'},
+          { name: 'javascript'},
+          { name: 'Python'}
+        ]
+      },
+      { name: 'Android Development'},
+      { name: 'Deep Learning & AI'}
     ]
   }
 
